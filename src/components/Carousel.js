@@ -61,7 +61,7 @@ const Carousel = ({slides}) => {
           key={index}
           initial={{scale: 0, rotation: -180}}
           animate={{scale: index===position?1:0.7, rotation: 0,
-          left: `${(index-position) * 30+12.5}vw`
+          left: `${(index-position) * 33.5+11.5}vw`
           }}
           transition={{type:'spring', stiffness: 260, damping: 20,}}
           >

@@ -10,37 +10,49 @@ const SideBars = () => {
   return (
     <div className={styles.sidebars}>
        <div className={styles.sideLeft}>
-       <motion.input
-          className={stylesBtn.sideIcons}
-          id={stylesBtn[theme]}
-          whileHover={{ scale: 1.4 }}
-          whileTap={{ scale: 0.6 }}
-          transition={{ type: 'tween', duration: 0.3 }}
-          animate={{rotate:270}}
-          type="image" src={require('../assets/github.png')}
-          />
-       <motion.input
-          className={stylesBtn.sideIcons}
-          id={stylesBtn[theme]}
-          whileHover={{ scale: 1.4 }}
-          whileTap={{ scale: 0.6 }}
-          transition={{ type: 'tween', duration: 0.3 }}
-          animate={{rotate:270}}
-          type="image" src={require('../assets/linkedin.png')}
-          />
-       <motion.input
-          className={stylesBtn.sideIcons}
-          id={stylesBtn[theme]}
-          whileHover={{ scale: 1.4 }}
-          whileTap={{ scale: 0.6 }}
-          transition={{ type: 'tween', duration: 0.3 }}
-          animate={{rotate:270}}
-          type="image" src={require('../assets/instagram.png')}
-          />
-        <img className={styles.sideLine} src={require('../assets/lineTop.png')} />
+        <a href='https://github.com/PhillipNguy' target='_blank'>
+        <motion.input
+            className={stylesBtn.sideIcons}
+            id={stylesBtn[theme]}
+            whileHover={{ scale: 1.4 }}
+            whileTap={{ scale: 0.6 }}
+            transition={{ type: 'tween', duration: 0.3 }}
+            animate={{rotate:270}}
+            type="image" src={require('../assets/github.png')}
+            />
+        </a>
+
+        <a href='https://www.linkedin.com/in/phillipnguy/' target='_blank'>
+        <motion.input
+            className={stylesBtn.sideIcons}
+            id={stylesBtn[theme]}
+            whileHover={{ scale: 1.4 }}
+            whileTap={{ scale: 0.6 }}
+            transition={{ type: 'tween', duration: 0.3 }}
+            animate={{rotate:270}}
+            type="image" src={require('../assets/linkedin.png')}
+            />
+        </a>
+
+        <a href='https://www.instagram.com/xforgetfulphilx/' target='_blank'>
+          <motion.input
+            className={stylesBtn.sideIcons}
+            id={stylesBtn[theme]}
+            whileHover={{ scale: 1.4 }}
+            whileTap={{ scale: 0.6 }}
+            transition={{ type: 'tween', duration: 0.3 }}
+            animate={{rotate:270}}
+            type="image" src={require('../assets/instagram.png')}
+            />
+        </a>
+        <img className={styles.sideLineL} src={require('../assets/lineTop.png')} />
       </div>
       <div className={styles.sideRight}>
-        <h4 className={styles.sideText}>nguyphillip@gmail.com</h4>
+        <a href="mailto:nguyphillip@gmail.com"
+        className={styles.sideText}
+        >
+          nguyphillip@gmail.com
+        </a>
         <img className={styles.sideLine} src={require('../assets/lineTop.png')} />
       </div>
     </div>

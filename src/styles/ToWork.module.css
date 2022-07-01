@@ -38,7 +38,7 @@
 
 .pBox {
   padding: 20px;
-  width: 40%;
+  width: 30vw;;
   background-color: #15223E;
   color: #8791AD;
   font-size: 16px;
@@ -67,6 +67,7 @@
 .contactMsg {
   margin-top: 20px;
   font-size: 30px;
+  font-size: clamp(18px, 3vw, 30px);
   color: #8692B0;
   font-weight: bold;
   width: 50vw;

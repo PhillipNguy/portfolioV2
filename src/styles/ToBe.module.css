@@ -3,8 +3,8 @@
   flex-direction: column;
   align-items: start;
   margin-top: 200px;
-  width: 90%;
-  row-gap: 25px;
+  width: 100%;
+  row-gap: 75px;
   position: relative;
 
   /* background-color: #8392a9; */
@@ -27,8 +27,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: relative;
-  top: -50px;
 }
 
 
@@ -61,28 +59,28 @@
 
 .portrait {
   position: relative;
+  margin-right: 75px;
   max-width: clamp(200px, 25vw, 300px);
   max-height: auto;
   right: -75px;
-  top: 75px;
+  top: 50px;
 
   box-shadow: 20px 20px 0 -5px #0A172F, 20px 20px 0px 3px #FE29E7;
 }
 
 
 @media all and (max-width: 768px) {
-  .section {
+  .content {
     flex-direction: column;
   }
 
 
 
   .portrait {
-    max-width: none;
-    max-height: none;
-    height: 300px;
-    width: 300px;
+    max-width: clamp(200px, 75vw, 300px);
+    max-height: auto;
     position: static;
+    margin-left: 15vw;
 
   }
 

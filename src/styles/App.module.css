@@ -96,7 +96,7 @@
   flex-direction: row;
   align-items: center;
   position: absolute;
-  bottom: -100px;
+  bottom: -150px;
   right: 0;
 }
 
@@ -106,20 +106,26 @@
 }
 
 .sideLine {
-  width: 10vw;
+  width: 15vh;
+}
+
+.sideLineL {
+  width: 20vh;
 }
 
 .sideText {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: normal;
   color: #8791AD;
+  text-decoration: none;
+
 }
 
 .sidebars {
   position: absolute;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-;
   width: 100vw;
   z-index: 1;
   background-color: #fe29e7;
@@ -133,7 +139,7 @@
   /* width: 30vw; */
   height: 300px;
   bottom: 0;
-  right: 0;
+  right: -125px;
   transform: rotate(90deg);
   column-gap: 10px;
 }
@@ -144,7 +150,7 @@
   align-items: center;
   height: 300px;
   bottom: 0;
-  left: 0;
+  left: -125px;
   transform: rotate(90deg);
   column-gap: 10px;
 }
@@ -172,6 +178,10 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
+  }
+
+  .sideRight, .sideLeft {
+    display: none;
   }
 }
 

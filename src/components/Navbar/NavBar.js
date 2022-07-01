@@ -70,15 +70,17 @@ const NavBar = React.forwardRef((props, ref) => {
         <NavLink ref={ref.toLove} refId='toLove' closeMobile={closeMobileMenu} />
         <NavLink ref={ref.toWork} refId='toWork' closeMobile={closeMobileMenu} />
         <NavLink ref={ref.toContact} refId='toContact' closeMobile={closeMobileMenu} />
-        <motion.button
-        className={stylesBtn.mainButton}
-        id={stylesBtn[theme]}
-        whileHover={{ scale: 1.4 }}
-        whileTap={{ scale: 0.1 }}
-        transition={{ type: 'tween', duration: 0.1 }}
-        >
-          Resume
-        </motion.button>
+        <a href={require('../../assets/PhillipNguy_Resume.pdf')} download='PhillipNguy_Resume.pdf'>
+          <motion.button
+          className={stylesBtn.mainButton}
+          id={stylesBtn[theme]}
+          whileHover={{ scale: 1.4 }}
+          whileTap={{ scale: 0.1 }}
+          transition={{ type: 'tween', duration: 0.1 }}
+          >
+            Resume
+          </motion.button>
+        </a>
       </NavMenu>
     </Nav>
   );

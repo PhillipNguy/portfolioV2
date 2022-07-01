@@ -24,6 +24,12 @@
   margin: 0;
 }
 
+#night.Portfolio {
+  margin: 0;
+  width: 120px;
+  height: 40px;
+}
+
 #night.Git {
   width: 40px;
   height: auto;
@@ -32,7 +38,7 @@
 }
 
 #night.sideIcons {
-  width: 30px;
+  width: 35px;
   height: auto;
   transform: rotate(-90deg)
 }
@@ -77,4 +83,5 @@
   z-index: 4;
   /* height: 15vh; */
   border-radius: 20px;
+  margin: 10px;
 }

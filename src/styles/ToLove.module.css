@@ -14,11 +14,16 @@
   align-items: center;
 }
 
+.hobbyGroup {
+  display: flex;
+  flex-direction: column;
+  row-gap: 150px;
+}
+
 .hobbiesSection {
   display: flex;
   flex-direction: row;
   position: relative;
-  margin-bottom: 60px;
   position: relative;
 }
 
@@ -27,6 +32,11 @@
   flex-direction: row;
   justify-content: end;
   align-items: center;
+}
+
+.lastHobbieSection {
+  margin-top: -50px;
+  margin-bottom: 100px;
 }
 
 .leftSide {
@@ -77,20 +87,30 @@
   font-size: 16px;
 }
 
+.buttonBox {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  color: #8892B0;
+  font-size: 12px;
+  column-gap: 10px;
+}
+
 .image {
   position: absolute;
   right: 75px;
   top: 70px;
-  max-width: clamp(100px, 40vw, 800px);
-  max-height: auto;
+  width: clamp(100px, 40vw, 600px);
+  height: auto;
   z-index: 1;
 
 }
 
 .imageLarger {
-  /* max-height: clamp(100px, 40vh, 600px); */
+  max-width: clamp(100px, 40vw, 800px);
+  max-height: auto;
   /* height: 100%; */
-  width: 480px;
+  /* width: 480px; */
   object-fit: cover;
   object-position: 50% 0;
 }
@@ -117,4 +137,40 @@
   flex-direction: row;
   align-items: center;
   justify-content: start
+}
+
+@media all and (max-width: 768px) {
+  .hobbiesSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .image, .imageLeft .imageLarger{
+    position: relative;
+    top: 30px;
+    right: 0;
+    left: 0;
+    max-width: 80vw;
+    max-height: auto;
+  }
+
+  .hobbiesSectionRight {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .subHeading, .heading, .pBox {
+    text-align: center;
+  }
+
+  .pBox{
+    width: 80vw;
+  }
+
+  .leftSide, .rightSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

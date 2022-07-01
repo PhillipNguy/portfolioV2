@@ -32,7 +32,7 @@ function App() {
         <NavBar ref={{ toBe, toLove, toWork, toContact }} />
         {/* <ThemeSwitch /> */}
         <div className={styles.MainBody}>
-          <Intro />
+          <Intro contactRef={toContact}/>
           <div ref={toBe}>
             <ToBe />
           </div>

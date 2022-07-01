@@ -7,11 +7,13 @@ import ToSectionBottom from './ToSectionBottom';
 import Carousel from './Carousel'
 import { motion } from 'framer-motion';
 import { ThemeContext } from '../pages/App';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const ToWork = () => {
   const { theme } = useContext(ThemeContext);
+  const navigate = useNavigate();
 
   return (
     <div className={styles.section}>
@@ -33,38 +35,43 @@ const ToWork = () => {
           require("../assets/sliceAlbum/slice07.png"),
           require("../assets/sliceAlbum/slice08.png"),
           require("../assets/sliceAlbum/slice09.png"),
-          require("../assets/sliceAlbum/slice10.png"),
+          // require("../assets/sliceAlbum/slice10.png"),
         ]}/>
-        <ul className={styles.skillBox}>
+        {/* <ul className={styles.skillBox}>
           <li>TypeScript</li>
           <li>NextJS</li>
           <li>NodeJS</li>
           <li>MongoDB</li>
           <li>Spoonacular API</li>
           <li>Heroku</li>
-        </ul>
+        </ul> */}
         <div className={styles.pBox}>
           <p>
           Designed and built Slice, a meal planning and budgeting app. Slice allows you to create a weekly meal plan based on a your budget, nutrion intake, and personal taste using the Spoonacular API. It will then generate a grocery list based on all the ingredients required for the recipes.
           </p>
           </div>
         <div className={styles.buttonBox}>
-          <motion.input
-          className={stylesBtn.Git}
-          id={stylesBtn[theme]}
-          whileHover={{ scale: 1.4 }}
-          whileTap={{ scale: 0.1 }}
-          transition={{ type: 'tween', duration: 0.1 }}
-          type="image" src={require('../assets/Vector.png')}
-          />
+          <a href='https://github.com/MagReda16/slice' target="_blank">
+            <motion.input
+            className={stylesBtn.Git}
+            id={stylesBtn[theme]}
+            whileHover={{ scale: 1.4 }}
+            whileTap={{ scale: 0.1 }}
+            transition={{ type: 'tween', duration: 0.1 }}
+            type="image" src={require('../assets/Vector.png')}
+            />
+          </a>
 
-          <motion.button
-          className={[stylesBtn.mainButton, stylesBtn.TryButton].join(' ')}
-          id={stylesBtn[theme]}
-          whileHover={{ scale: 1.4 }}
-          whileTap={{ scale: 0.1 }}
-          transition={{ type: 'tween', duration: 0.1 }}
-          >Try Now!</motion.button>
+          <a href='https://slice-henna.vercel.app/' target='_blank'>
+            <motion.button
+            className={[stylesBtn.mainButton, stylesBtn.TryButton].join(' ')}
+            id={stylesBtn[theme]}
+            whileHover={{ scale: 1.4 }}
+            whileTap={{ scale: 0.1 }}
+            transition={{ type: 'tween', duration: 0.1 }}
+            >Try Now!</motion.button>
+          </a>
+
         </div>
       </div>
       <div className={stylesG.bottomSection}>
