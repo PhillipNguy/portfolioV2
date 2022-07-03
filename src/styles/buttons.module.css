@@ -43,6 +43,13 @@
   transform: rotate(-90deg)
 }
 
+#night.Icons {
+  width: 35px;
+  height: auto;
+  transform: rotate(0deg);
+  margin: 10px;
+}
+
 #night.mainButton.contact {
   color: #fe29e7;
   border-color: #fe29e7;

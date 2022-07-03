@@ -4,6 +4,59 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../pages/App';
 import { motion } from 'framer-motion';
 
+const HeroBox = {
+  hidden: {
+    x: '200vw'
+  },
+  visible: {
+    x: '0',
+    transition: {
+      type: 'tween',
+      duration: .1,
+    },
+    animate: {
+      rotate:270,
+    }
+  }
+}
+
+const HeroSway = {
+  hidden: {
+    x: '0',
+  },
+  visible: {
+    x: '1vw',
+    transition: {
+      duration: 1.2,
+      type:'tween',
+      yoyo: Infinity
+    }
+  }
+}
+
+const CloudSway1 = {
+  hidden: {
+    x: '1vw',
+  },
+  visible: {
+    x: '0',
+    transition: {
+      duration: 1,
+      type:'tween',
+      yoyo: Infinity,
+    }
+  },
+  visible2: {
+    x: '0',
+    transition: {
+      duration: 1,
+      type:'tween',
+      yoyo: Infinity,
+      delay: .3,
+    }
+  }
+}
+
 const Intro = ({contactRef}) => {
   const { theme } = useContext(ThemeContext);
 
@@ -43,9 +96,27 @@ const Intro = ({contactRef}) => {
             onClick={() => scrollToSection(contactRef)}
             >Contact Me!</motion.button>
       </div>
-      <img src={require('../assets/astronautlogo.webp')} className={styles.hero} />
-      <img className={styles.cloud1} src={require('../assets/cloud2.png')} />
-      <img className={styles.cloud2} src={require('../assets/cloud2.png')} />
+      <motion.div
+        variants={HeroBox}
+        // initial='hidden'
+        // animate='visible'
+      >
+        <motion.img
+        variants={HeroSway}
+        initial='hidden'
+        animate='visible'
+        src={require('../assets/astronautlogo.webp')} className={styles.hero} />
+        <motion.img
+        variants={CloudSway1}
+        initial='hidden'
+        animate='visible2'
+        className={styles.cloud1} src={require('../assets/cloud2.png')} />
+        <motion.img
+        variants={CloudSway1}
+        initial='hidden'
+        animate='visible'
+        className={styles.cloud2} src={require('../assets/cloud2.png')} />
+        </motion.div>
     </div>
   );
 };
