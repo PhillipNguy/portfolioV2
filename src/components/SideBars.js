@@ -18,7 +18,7 @@ const SideBars = () => {
             whileTap={{ scale: 0.6 }}
             transition={{ type: 'tween', duration: 0.3 }}
             animate={{rotate:270}}
-            type="image" src={require('../assets/github.png')}
+            type="image" src={require('../assets/logos/githubGreyCircle.png')}
             />
         </a>
 
@@ -30,7 +30,7 @@ const SideBars = () => {
             whileTap={{ scale: 0.6 }}
             transition={{ type: 'tween', duration: 0.3 }}
             animate={{rotate:270}}
-            type="image" src={require('../assets/linkedin.png')}
+            type="image" src={require('../assets/logos/linkedin.png')}
             />
         </a>
 
@@ -42,7 +42,7 @@ const SideBars = () => {
             whileTap={{ scale: 0.6 }}
             transition={{ type: 'tween', duration: 0.3 }}
             animate={{rotate:270}}
-            type="image" src={require('../assets/instagram.png')}
+            type="image" src={require('../assets/logos/instagram.png')}
             />
         </a>
         <img className={styles.sideLineL} src={require('../assets/lineTop.png')} />

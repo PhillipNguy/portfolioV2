@@ -49,7 +49,7 @@ const ToBe = () => {
         </div>
         <div className={styles.pictureBox}>
           {/* <div className={styles.pictureFrame}/> */}
-          <img src={require('../assets/portrait.jpg')} className={styles.portrait}/>
+          <img src={require('../assets/portrait.jpeg')} className={styles.portrait}/>
         </div>
       </div>
       <div className={stylesG.bottomSection}>

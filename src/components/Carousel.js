@@ -57,11 +57,11 @@ const Carousel = ({slides}) => {
       className={styles.row}>
         {
           slides.map((url, index) => (
-          <motion.div className={styles.container}
+          <motion.div className={index===position ? [styles.container, styles.topContainer].join(' ') : styles.container}
           key={index}
           initial={{scale: 0, rotation: -180}}
           animate={{scale: index===position?1:0.7, rotation: 0,
-          left: `${(index-position) * 33.5+11.5}vw`
+          left: `${(index-position) * 33+11}vw`
           }}
           transition={{type:'spring', stiffness: 260, damping: 20,}}
           >

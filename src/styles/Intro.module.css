@@ -29,6 +29,7 @@
   font-size: clamp(30px, 8vw, 70px);
   font-weight: bold;
   text-align: left;
+  z-index: 3;
 }
 
 .Paragraph {
@@ -93,7 +94,7 @@
 }
 
 @media all and (max-width: 1200px) {
-  .hero {
+  .hero, .cloud1, .cloud2 {
     display: none;
   }
 }

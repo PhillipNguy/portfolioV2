@@ -46,6 +46,10 @@ function App() {
             <ToContact />
           </div>
         </div>
+        <div className={styles.creditBox}>
+          <h4>Designed and Created by Phillip Nguy</h4>
+          <h4>Design inspired by Brittany Chiang and Hero is from Google</h4>
+        </div>
       </div>
     </ThemeContext.Provider>
   );

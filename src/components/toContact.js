@@ -28,7 +28,7 @@ const ToContact = () => {
             >Contact</motion.button>
         </a>
       </div>
-      <div className={stylesG.bottomSection}>
+      <div className={[stylesG.bottomSection, stylesG.contact].join(' ')}>
         <ToSectionBottom/>
       </div>
     </div>

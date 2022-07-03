@@ -4,7 +4,8 @@ import stylesG from '../styles/App.module.css';
 import React, { useContext } from 'react';
 import ToSection from './ToSection';
 import ToSectionBottom from './ToSectionBottom';
-import Carousel from './Carousel'
+import Carousel from './Carousel';
+import OtherProjects from './OtherProjects';
 import { motion } from 'framer-motion';
 import { ThemeContext } from '../pages/App';
 import { useNavigate } from 'react-router-dom';
@@ -37,14 +38,18 @@ const ToWork = () => {
           require("../assets/sliceAlbum/slice09.png"),
           // require("../assets/sliceAlbum/slice10.png"),
         ]}/>
-        {/* <ul className={styles.skillBox}>
-          <li>TypeScript</li>
-          <li>NextJS</li>
-          <li>NodeJS</li>
-          <li>MongoDB</li>
-          <li>Spoonacular API</li>
-          <li>Heroku</li>
-        </ul> */}
+        <div className={styles.skillLine}>
+          <ul className={styles.skillBox}>
+            <li>TypeScript</li>
+            <li>NextJS</li>
+            <li>NodeJS</li>
+          </ul>
+          <ul className={styles.skillBox}>
+            <li>MongoDB</li>
+            <li>Spoonacular API</li>
+            <li>Heroku</li>
+            </ul>
+        </div>
         <div className={styles.pBox}>
           <p>
           Designed and built Slice, a meal planning and budgeting app. Slice allows you to create a weekly meal plan based on a your budget, nutrion intake, and personal taste using the Spoonacular API. It will then generate a grocery list based on all the ingredients required for the recipes.
@@ -58,7 +63,7 @@ const ToWork = () => {
             whileHover={{ scale: 1.4 }}
             whileTap={{ scale: 0.1 }}
             transition={{ type: 'tween', duration: 0.1 }}
-            type="image" src={require('../assets/Vector.png')}
+            type="image" src={require('../assets//logos/githubBlueCircle.png')}
             />
           </a>
 
@@ -74,6 +79,8 @@ const ToWork = () => {
 
         </div>
       </div>
+      <h1 className={styles.heading}>Other Projects</h1>
+      <OtherProjects/>
       <div className={stylesG.bottomSection}>
         <ToSectionBottom/>
       </div>
