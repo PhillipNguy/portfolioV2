@@ -103,7 +103,7 @@ function App() {
           });
         }
         if (!inView && ref===toLoveRef) {
-          controls2.start({x: '100vw'});
+          controls2.start({x: '-100vw'});
         }
 
         if (inView && ref===toWorkRef) {
@@ -128,7 +128,7 @@ function App() {
           });
         }
         if (!inView && ref===toContactRef) {
-          controls4.start({x: '100vw'});
+          controls4.start({x: '-100vw'});
         }
 
       }, [controls, inView]);

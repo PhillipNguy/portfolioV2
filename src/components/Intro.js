@@ -52,7 +52,6 @@ const CloudSway1 = {
       duration: 1,
       type:'tween',
       yoyo: Infinity,
-      delay: .3,
     }
   }
 }
@@ -100,7 +99,7 @@ const Intro = ({contactRef}) => {
         variants={HeroBox}
         // initial='hidden'
         // animate='visible'
-      >
+        >
         <motion.img
         variants={HeroSway}
         initial='hidden'
@@ -116,7 +115,7 @@ const Intro = ({contactRef}) => {
         initial='hidden'
         animate='visible'
         className={styles.cloud2} src={require('../assets/cloud2.png')} />
-        </motion.div>
+      </motion.div>
     </div>
   );
 };

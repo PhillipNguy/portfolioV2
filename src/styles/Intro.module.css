@@ -91,6 +91,10 @@
   .SubHead {
     font-size: clamp(30px, 7vw, 50px);
   }
+
+  .hero, .cloud1, .cloud2 {
+    display: none;
+  }
 }
 
 @media all and (max-width: 1200px) {
