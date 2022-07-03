@@ -126,6 +126,6 @@
 
 @media all and (max-width: 1200px) {
   .hero, .cloud1, .cloud2 {
-    display: none;
+    opacity: 0;
   }
 }

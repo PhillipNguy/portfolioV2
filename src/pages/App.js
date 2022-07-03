@@ -43,13 +43,6 @@ function App() {
   const [theme, setTheme] = useState('night');
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(()=> {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2500)
-  }, [])
-
-
   const toggleTheme = () => {
     setTheme((curr) => (curr === 'day' ? 'night' : 'day'));
   };
@@ -151,11 +144,17 @@ function App() {
   const { ref: toWorkRef } = useAnimateOnInView();
   const { ref: toContactRef } = useAnimateOnInView();
 
+  useEffect(()=> {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2500)
+  }, [])
+
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-       {isLoading===true ?
-        <Loading/> :
+       {/* {isLoading===true ?
+        pass : */}
         <div className={styles.App} id={theme}>
           <SideBars/>
           <NavBar ref={{ toBe, toLove, toWork, toContact }} />
@@ -239,7 +238,7 @@ function App() {
             <h4>Design inspired by Brittany Chiang and Hero is from Google</h4>
           </div>
         </div>
-        }
+        {/* } */}
     </ThemeContext.Provider>
   );
 }
