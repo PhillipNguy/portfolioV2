@@ -10,10 +10,12 @@ import ToLove from '../components/ToLove';
 import ToWork from '../components/ToWork';
 import ToContact from '../components/toContact';
 import SideBars from '../components/SideBars'
+import { Loading } from '../components/Loading';
 // import ThemeSwitch from '../components/ThemeSwitch';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import useAnimateOnInView from '../components/hooks/useAnimateOnInView';
+
 
 export const ThemeContext = createContext(null);
 
@@ -39,6 +41,13 @@ const BodyVariant = {
 
 function App() {
   const [theme, setTheme] = useState('night');
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(()=> {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2500)
+  }, [])
 
 
   const toggleTheme = () => {
@@ -145,89 +154,92 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className={styles.App} id={theme}>
-        <SideBars/>
-        <NavBar ref={{ toBe, toLove, toWork, toContact }} />
-        {/* <ThemeSwitch /> */}
-        <div className={styles.MainBody}>
-          <Intro contactRef={toContact}/>
+       {isLoading===true ?
+        <Loading/> :
+        <div className={styles.App} id={theme}>
+          <SideBars/>
+          <NavBar ref={{ toBe, toLove, toWork, toContact }} />
+          {/* <ThemeSwitch /> */}
+          <div className={styles.MainBody}>
+            <Intro contactRef={toContact}/>
 
 
-          <div ref={toBeRef}>
-            <motion.div ref={toBe}
-              animate={controls}
-            >
-              <ToBe />
-            </motion.div>
+            <div ref={toBeRef}>
+              <motion.div ref={toBe}
+                animate={controls}
+              >
+                <ToBe />
+              </motion.div>
+            </div>
+
+
+            <div ref={toLoveRef}>
+              <motion.div ref={toLove}
+              animate={controls2}
+              >
+                <ToLove />
+              </motion.div>
+            </div>
+
+
+            <div ref={toWorkRef}>
+              <motion.div ref={toWork}
+              animate={controls3}
+              >
+                <ToWork />
+              </motion.div>
+            </div>
+
+
+            <div ref={toContactRef}>
+              <motion.div ref={toContact}
+              animate={controls4}
+              >
+                <ToContact />
+              </motion.div>
+            </div>
+
           </div>
-
-
-          <div ref={toLoveRef}>
-            <motion.div ref={toLove}
-            animate={controls2}
-            >
-              <ToLove />
-            </motion.div>
-          </div>
-
-
-          <div ref={toWorkRef}>
-            <motion.div ref={toWork}
-            animate={controls3}
-            >
-              <ToWork />
-            </motion.div>
-          </div>
-
-
-          <div ref={toContactRef}>
-            <motion.div ref={toContact}
-            animate={controls4}
-            >
-              <ToContact />
-            </motion.div>
-          </div>
-
-        </div>
-        <div className={styles.iconBox}>
-          <a href='https://github.com/PhillipNguy' target='_blank'>
-          <motion.input
-              className={stylesBtn.Icons}
-              id={stylesBtn[theme]}
-              whileHover={{ scale: 1.4 }}
-              whileTap={{ scale: 0.6 }}
-              transition={{ type: 'tween', duration: 0.3 }}
-              type="image" src={require('../assets/logos/githubGreyCircle.png')}
-              />
-          </a>
-
-          <a href='https://www.linkedin.com/in/phillipnguy/' target='_blank'>
-          <motion.input
-              className={stylesBtn.Icons}
-              id={stylesBtn[theme]}
-              whileHover={{ scale: 1.4 }}
-              whileTap={{ scale: 0.6 }}
-              transition={{ type: 'tween', duration: 0.3 }}
-              type="image" src={require('../assets/logos/linkedin.png')}
-              />
-          </a>
-
-          <a href='https://www.instagram.com/xforgetfulphilx/' target='_blank'>
+          <div className={styles.iconBox}>
+            <a href='https://github.com/PhillipNguy' target='_blank'>
             <motion.input
-              className={stylesBtn.Icons}
-              id={stylesBtn[theme]}
-              whileHover={{ scale: 1.4 }}
-              whileTap={{ scale: 0.6 }}
-              transition={{ type: 'tween', duration: 0.3 }}
-              type="image" src={require('../assets/logos/instagram.png')}
-              />
-          </a>
+                className={stylesBtn.Icons}
+                id={stylesBtn[theme]}
+                whileHover={{ scale: 1.4 }}
+                whileTap={{ scale: 0.6 }}
+                transition={{ type: 'tween', duration: 0.3 }}
+                type="image" src={require('../assets/logos/githubGreyCircle.png')}
+                />
+            </a>
+
+            <a href='https://www.linkedin.com/in/phillipnguy/' target='_blank'>
+            <motion.input
+                className={stylesBtn.Icons}
+                id={stylesBtn[theme]}
+                whileHover={{ scale: 1.4 }}
+                whileTap={{ scale: 0.6 }}
+                transition={{ type: 'tween', duration: 0.3 }}
+                type="image" src={require('../assets/logos/linkedin.png')}
+                />
+            </a>
+
+            <a href='https://www.instagram.com/xforgetfulphilx/' target='_blank'>
+              <motion.input
+                className={stylesBtn.Icons}
+                id={stylesBtn[theme]}
+                whileHover={{ scale: 1.4 }}
+                whileTap={{ scale: 0.6 }}
+                transition={{ type: 'tween', duration: 0.3 }}
+                type="image" src={require('../assets/logos/instagram.png')}
+                />
+            </a>
+          </div>
+          <div className={styles.creditBox}>
+            <h4>Designed and Created by Phillip Nguy</h4>
+            <h4>Design inspired by Brittany Chiang and Hero is from Google</h4>
+          </div>
         </div>
-        <div className={styles.creditBox}>
-          <h4>Designed and Created by Phillip Nguy</h4>
-          <h4>Design inspired by Brittany Chiang and Hero is from Google</h4>
-        </div>
-      </div>
+        }
     </ThemeContext.Provider>
   );
 }
