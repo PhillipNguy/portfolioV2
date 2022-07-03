@@ -8,6 +8,14 @@
   text-align: center;
 }
 
+.navMenu {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 0;
+  /* transition: all 5s ease; */
+}
+
 .MainBody {
   max-width: clamp(100px, 80vw, 1000px);
   margin-top: 200px;
@@ -19,15 +27,6 @@
   justify-content: space-between;
   width: 100%;
   padding: 3rem;
-}
-
-.logo {
-  position: relative;
-  top: 50px;
-  left: 50px;
-  /* margin-left: 10px; */
-  width:50px;
-  height:50px;
 }
 
 .navBar {
@@ -174,16 +173,6 @@
     width: 80vw;
   }
 
-
-  .navMenu {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    height: 100vh;
-    position: absolute;
-    /* transition: all 5s ease; */
-  }
-
   .link {
     font-size: 18px;
   }
@@ -194,13 +183,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 60vw;
+    height: 100vh;
     row-gap: 25px;
     align-items: center;
     background-color: #112240;
     right: 0;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 1;
+    z-index: 2;
   }
 
   .sideRight, .sideLeft {

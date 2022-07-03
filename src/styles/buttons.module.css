@@ -79,6 +79,10 @@
   color: #ffff;
 }
 
+#night.resume {
+  margin-top: 30px;
+}
+
 #night.traversal{
   z-index: 4;
   /* height: 15vh; */

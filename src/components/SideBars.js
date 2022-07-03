@@ -48,11 +48,12 @@ const SideBars = () => {
         <img className={styles.sideLineL} src={require('../assets/lineTop.png')} />
       </div>
       <div className={styles.sideRight}>
-        <a href="mailto:nguyphillip@gmail.com"
+        <motion.a href="mailto:nguyphillip@gmail.com"
         className={styles.sideText}
+        whileHover={{scale:1.1}}
         >
           nguyphillip@gmail.com
-        </a>
+        </motion.a>
         <img className={styles.sideLine} src={require('../assets/lineTop.png')} />
       </div>
     </div>
