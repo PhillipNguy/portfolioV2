@@ -15,6 +15,7 @@ import { Loading } from '../components/Loading';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import useAnimateOnInView from '../components/hooks/useAnimateOnInView';
+import { Helmet } from 'react-helmet';
 
 
 export const ThemeContext = createContext(null);
@@ -155,6 +156,12 @@ function App() {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
        {/* {isLoading===true ?
         pass : */}
+        <Helmet>
+                <meta charSet="utf-8"/>
+                <title>Phillip Nguy</title>
+                <link rel="canonical" href="https://phillipnguy.com"/>
+                <meta name="description" content="A site to share my journey and adventure!" />
+            </Helmet>
         <div className={styles.App} id={theme}>
           <SideBars/>
           <NavBar ref={{ toBe, toLove, toWork, toContact }} />
