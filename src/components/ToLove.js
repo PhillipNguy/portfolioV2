@@ -23,7 +23,9 @@ const ToLove = () => {
             <h1 className={styles.heading}>Have You Seen Haikyu?</h1>
             <div className={styles.pBox}>
               <p className={styles.paragraph}>
-              Through its unique method of storytelling, Anime can make anything exciting, in a way that I can only dream of as a cinematagrapher. <br/> <br/>Some of my favorites of all time are Naruto, Sword Art Online, Charlotte, Food Wars, ReLife, ReZero, Haikyu, and so many more! All of these shows has had a massive impact on some aspect of my values and beliefs.
+              Through its unique method of storytelling, Anime can make things exciting, in a way that I can only dream of as a cinematagrapher.
+              <br/> <br/>
+              One show, Haiyku even introdueced me to volleyball. Although my serves and spikes are not consistent yet, nothing will beat the feeling of smashing the ball and it staying in!
               </p>
               </div>
           </div>
@@ -37,7 +39,7 @@ const ToLove = () => {
             <h1 className={[styles.heading, styles.textRight].join(' ')}>Life Should Be Savored</h1>
             <div className={styles.pBox}>
               <p className={styles.paragraph}>
-              Working remotely has been such a blessing as it has allowed me to live wherever I want. Fully immersing myself within a culture is totally different from visiting as a tourist. Whether it’s a weekend trip or just finding a new cafe, this mental shift is exactly what drives me to constantly evolve as a developer.
+              Working remotely has been such a blessing, as it has allowed me to live wherever I want. Fully immersing myself within a culture is totally different from just visiting as a tourist. Whether it’s a weekend trip or just finding a new cafe, this mental shift is exactly what drives me to constantly evolve as a developer.
               <br/> <br/>
               Currently bouncing around US, Vietnam, and Japan. (Hopefully Europe and South Korea in the future!)
               </p>
@@ -59,9 +61,7 @@ const ToLove = () => {
             <h1 className={styles.heading}>The Love Of Learning</h1>
             <div className={styles.pBox}>
               <p className={styles.paragraph}>
-              I think boredom can be pretty great. Being bored has allowed me to ask so many thought provoking questions. This, paired with my natural curiosity, is the stem from which my love of learning developed.
-              <br/> <br/>
-              I love Philosophy because it pushes me to constantly question my own beliefs. I love learning about the Earth and its ecosystems because of how everything is intricately interconnected. Lastly, I love learning Japanese because it is a beautiful language that allows me to learn from people with a completely opposite culture from which I am accustomed to.
+              I love Philosophy because it pushes me to constantly question my own assumptions and logically check their validity. Ecology has taught me how intricately interconnected everything is and that every solution will have various reactions. Lastly, I love learning Japanese because it's a beautiful language that allows me to learn from people with a completely opposite culture and perpspective from which I am accustomed to.
               </p>
               </div>
           </div>

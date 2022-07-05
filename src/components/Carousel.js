@@ -35,7 +35,7 @@ const Carousel = ({slides}) => {
         className={[stylesBtn.mainButton, stylesBtn.traversal].join(' ')}
         id={stylesBtn[theme]}
         whileHover={{ scale: 1.4 }}
-        whileTap={{ scale: 0.1 }}
+        whileTap={{ scale: 0.9 }}
         transition={{ type: 'tween', duration: 0.1 }}
         onClick={onLeft}
         >
@@ -45,7 +45,7 @@ const Carousel = ({slides}) => {
         className={[stylesBtn.mainButton, stylesBtn.traversal].join(' ')}
         id={stylesBtn[theme]}
         whileHover={{ scale: 1.4 }}
-        whileTap={{ scale: 0.1 }}
+        whileTap={{ scale: 0.9 }}
         transition={{ type: 'tween', duration: 0.1 }}
         onClick={onRight}
         >

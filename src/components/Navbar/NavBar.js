@@ -120,7 +120,7 @@ const NavBar = React.forwardRef((props, ref) => {
                 className={stylesBtn.mainButton}
                 id={stylesBtn[theme]}
                 whileHover={{ scale: 1.4 }}
-                whileTap={{ scale: 0.1 }}
+                whileTap={{ scale: 0.9 }}
                 transition={{ type: 'tween', duration: 0.1 }}
                 >
                   Resume

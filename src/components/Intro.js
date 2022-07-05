@@ -74,23 +74,21 @@ const Intro = ({contactRef}) => {
           こんにちは はじめまして! (Hello, Nice to meet you!)
         </h3>
         <h1 className={styles.Name}>Phillip Nguy</h1>
-        <h2 className={styles.SubHead}>Developer. Travler. Cinematographer.</h2>
+        <h2 className={styles.SubHead}>Developer. Environmentalist. Cinematographer.</h2>
         <div className={styles.bodyBox}>
           <p className={styles.Paragraph}>
-            I’m a traveling software engineer that is based in California, but
+            I’m a software engineer that is based in California, but
             will often work remotely from Vietnam, Japan, and anywhere else that
-            life may take me.
+            life takes me.
             <br/> <br/>
-            Freedom and creativity reigns supreme, and I intend on using it to
-            build innovative products that could provide a more sustainable
-            future!
+            Freedom and creativity reign supreme, and my dream is to build innovative software that could provide a more sustainable future!
           </p>
         </div>
         <motion.button
             className={[stylesBtn.mainButton, stylesBtn.contact].join(' ')}
             id={stylesBtn[theme]}
             whileHover={{ scale: 1.4 }}
-            whileTap={{ scale: 0.1 }}
+            whileTap={{ scale: 0.9 }}
             transition={{ type: 'tween', duration: 0.1 }}
             onClick={() => scrollToSection(contactRef)}
             >Contact Me!</motion.button>
