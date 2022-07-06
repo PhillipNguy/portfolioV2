@@ -17,13 +17,13 @@ const ToContact = () => {
       </div>
       <div className={styles.contactContent}>
         <h1 className={styles.heading}>Let's Connect</h1>
-        <h2 className={styles.contactMsg}>I am currently open to new opportunities as well as my next adventure. So whether it’s a potental job match or you find yourself traveling in the same country, let’s have a chat!</h2>
+        <h2 className={styles.contactMsg}>I am currently open to new opportunities as well as further expanding my connections. So whether it’s a potental job match or you find yourself traveling in the same country, let’s have a chat!</h2>
         <a href='mailto:nguyphillip@gmail.com'>
           <motion.button
             className={[stylesBtn.mainButton, stylesBtn.contactSecondary].join(' ')}
             id={stylesBtn[theme]}
             whileHover={{ scale: 1.4 }}
-            whileTap={{ scale: 0.1 }}
+            whileTap={{ scale: 0.9 }}
             transition={{ type: 'tween', duration: 0.1 }}
             >Contact</motion.button>
         </a>

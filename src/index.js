@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import './styles/index.css';
 import App from './pages/App';
+import { Helmet } from 'react-helmet';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+    <Helmet>
+              <meta charSet="utf-8" />
+              <title>Phillip Nguy</title>
+              <link rel="canonical" href="https://PhillipNguy.com" />
+              <meta name="description" content="Phillip Nguy's Portfolio" />
+          </Helmet>
     <App />
   </BrowserRouter>
 );

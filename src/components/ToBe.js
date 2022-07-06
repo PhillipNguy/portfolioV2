@@ -25,11 +25,9 @@ const ToBe = () => {
             <br />
             <br />
             My studies in Environmental Science and Philosophy
-            further fueled my love of learning and finally giving my code a purpose.
-            Throughout my undergraduate studies, I saw various opportunities to
-            automate data collection and analysis. So after taking a rigourous
-            software engineering bootcamp at Codeworks, I am ready for my next big
-            adventure!
+            further fueled my love for learning and finally gave my code a purpose.
+            After years of self-learning, I decided to take a rigourous
+            software engineering bootcamp at Codeworks to solidify my knowledge. I am now ready for my next big adventure!
             <br/>
             <br/>
             Here are a few technologies I’ve been working with recently:

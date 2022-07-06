@@ -21,7 +21,7 @@ const Project = (props) => {
               className={stylesBtn.Git}
               id={stylesBtn[theme]}
               whileHover={{ scale: 1.4 }}
-              whileTap={{ scale: 0.1 }}
+              whileTap={{ scale: 0.9 }}
               transition={{ type: 'tween', duration: 0.1 }}
               type="image" src={require('../assets/logos/githubPink.png')}
               />

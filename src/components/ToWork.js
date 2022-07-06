@@ -52,7 +52,7 @@ const ToWork = () => {
         </div>
         <div className={styles.pBox}>
           <p>
-          Designed and built Slice, a meal planning and budgeting app. Slice allows you to create a weekly meal plan based on a your budget, nutrion intake, and personal taste using the Spoonacular API. It will then generate a grocery list based on all the ingredients required for the recipes.
+          Designed and built Slice, a meal planning and budgeting progressive web app. Slice allows you to create a weekly meal plan based on a your budget, nutrion intake, and personal taste using the Spoonacular API. It will then generate a grocery list based on all the ingredients required for the recipes.
           </p>
           </div>
         <div className={styles.buttonBox}>
@@ -61,7 +61,7 @@ const ToWork = () => {
             className={stylesBtn.Git}
             id={stylesBtn[theme]}
             whileHover={{ scale: 1.4 }}
-            whileTap={{ scale: 0.1 }}
+            whileTap={{ scale: 0.9 }}
             transition={{ type: 'tween', duration: 0.1 }}
             type="image" src={require('../assets//logos/githubBlueCircle.png')}
             />
@@ -72,7 +72,7 @@ const ToWork = () => {
             className={[stylesBtn.mainButton, stylesBtn.TryButton].join(' ')}
             id={stylesBtn[theme]}
             whileHover={{ scale: 1.4 }}
-            whileTap={{ scale: 0.1 }}
+            whileTap={{ scale: 0.9 }}
             transition={{ type: 'tween', duration: 0.1 }}
             >Try Now!</motion.button>
           </a>

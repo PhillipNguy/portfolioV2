@@ -7,7 +7,7 @@ const OtherProjects = () => {
       <Project
       link='https://github.com/MagReda16/whoswhere'
       projectName='WhosWhere'
-      projectDescription=" Refactored an existing code base by to TypeScript as well as writing various reusable components and hooks. Created new data models and updated controllers and routes for new features."
+      projectDescription=" Refactored an existing code base to TypeScript as well as writing various reusable components and hooks. Created new data models and updated controllers and routes for new features."
       techStack={['React', 'JS', 'TS', 'CSS', 'Node.js', 'Mongo']}
       />
       <Project
