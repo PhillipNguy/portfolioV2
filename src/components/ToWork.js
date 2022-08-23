@@ -27,16 +27,16 @@ const ToWork = () => {
         <h1 className={styles.heading}>Built The Web App: Slice</h1>
         <Carousel slides={[
           require('../assets/sliceAlbum/slice.mp4'),
-          require('../assets/sliceAlbum/slice01.png'),
-          require("../assets/sliceAlbum/slice02.png"),
-          require("../assets/sliceAlbum/slice03.png"),
-          require("../assets/sliceAlbum/slice04.png"),
-          require("../assets/sliceAlbum/slice05.png"),
-          require("../assets/sliceAlbum/slice06.png"),
-          require("../assets/sliceAlbum/slice07.png"),
-          require("../assets/sliceAlbum/slice08.png"),
-          require("../assets/sliceAlbum/slice09.png"),
-          // require("../assets/sliceAlbum/slice10.png"),
+          require('../assets/sliceAlbum/slice01.jpg'),
+          require("../assets/sliceAlbum/slice02.jpg"),
+          require("../assets/sliceAlbum/slice03.jpg"),
+          require("../assets/sliceAlbum/slice04.jpg"),
+          require("../assets/sliceAlbum/slice05.jpg"),
+          require("../assets/sliceAlbum/slice06.jpg"),
+          require("../assets/sliceAlbum/slice07.jpg"),
+          require("../assets/sliceAlbum/slice08.jpg"),
+          require("../assets/sliceAlbum/slice09.jpg"),
+          // require("../assets/sliceAlbum/slice10.jpg"),
         ]}/>
         <div className={styles.skillLine}>
           <ul className={styles.skillBox}>
