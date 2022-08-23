@@ -48,7 +48,7 @@ export const X = styled(FaTimes)`
 export const NavMenu = styled.div`
   display: flex;
   align-item: center;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-right: 40px;
 
   @media all and (max-width: 768px) {
