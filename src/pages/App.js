@@ -48,6 +48,7 @@ function App() {
     setTheme((curr) => (curr === 'day' ? 'night' : 'day'));
   };
 
+  const intro = useRef(null);
   const toBe = useRef(null);
   const toLove = useRef(null);
   const toWork = useRef(null);
@@ -164,9 +165,9 @@ function App() {
             </Helmet>
         <div className={styles.App} id={theme}>
           <SideBars/>
-          <NavBar ref={{ toBe, toLove, toWork, toContact }} />
+          <NavBar ref={{ intro, toBe, toLove, toWork, toContact }} />
           {/* <ThemeSwitch /> */}
-          <div className={styles.MainBody}>
+          <div ref={intro} className={styles.MainBody}>
             <Intro contactRef={toContact}/>
 
 

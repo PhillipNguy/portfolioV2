@@ -66,12 +66,22 @@ const NavBar = React.forwardRef((props, ref) => {
     // }
   }, []);
 
+  const scrollToSection = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current,
+      behavior: 'smooth',
+    });
+  };
 
 
 
   return (
     <Nav className={styles.topBar}>
-      <img src={require('../../assets/logo.png')} className={stylesNav.logo}/>
+      <button className={stylesNav.logoButton} onClick={()=> scrollToSection(ref.intro)}>
+        <img src={require('../../assets/logo.png')} className={stylesNav.logo} />
+      </button>
+
+
       {click ? <X onClick={handleClick} className={stylesNav.button}/>
       : <Bars onClick={handleClick} className={stylesNav.button}/>}
       <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={()=> null}>

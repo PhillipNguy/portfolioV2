@@ -56,7 +56,7 @@ const CloudSway1 = {
   }
 }
 
-const Intro = ({contactRef}) => {
+const Intro = ({intro, contactRef}) => {
   const { theme } = useContext(ThemeContext);
 
 
