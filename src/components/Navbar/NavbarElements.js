@@ -16,7 +16,7 @@ export const Bars = styled(FaBars)`
   @media all and (max-width: 768px) {
     display: block;
     position: absolute;
-    top: 25px;
+    top: 5px;
     right: clamp(1px, 1vw, 25px);
     transform: translate(-100%, 75%);
     font-size: 1.8rem;
@@ -34,7 +34,7 @@ export const X = styled(FaTimes)`
     @media all and (max-width: 768px) {
       display: block;
       position: absolute;
-      top: 25px;
+      top: 5px;
       right: clamp(1px, 1vw, 25px);
       transform: translate(-100%, 75%);
       font-size: 1.8rem;
@@ -48,7 +48,7 @@ export const X = styled(FaTimes)`
 export const NavMenu = styled.div`
   display: flex;
   align-item: center;
-  padding-top: 40px;
+  padding-top: 10px;
   padding-right: 40px;
 
   @media all and (max-width: 768px) {
