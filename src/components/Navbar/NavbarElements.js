@@ -16,8 +16,8 @@ export const Bars = styled(FaBars)`
   @media all and (max-width: 768px) {
     display: block;
     position: absolute;
-    top: 33px;
-    right: 25px;
+    top: 25px;
+    right: clamp(1px, 1vw, 25px);
     transform: translate(-100%, 75%);
     font-size: 1.8rem;
     cursor: pointer;
@@ -34,8 +34,8 @@ export const X = styled(FaTimes)`
     @media all and (max-width: 768px) {
       display: block;
       position: absolute;
-      top: 33px;
-      right: 25px;
+      top: 25px;
+      right: clamp(1px, 1vw, 25px);
       transform: translate(-100%, 75%);
       font-size: 1.8rem;
       cursor: pointer;
