@@ -3,9 +3,13 @@
   flex-direction: column;
   align-items: flex-start;
   margin: 0px auto;
-  max-width: 1000px;
+  width: 100%;
 
   row-gap: 5px;
+}
+
+.IntroSection {
+  width: 100%;
 }
 
 .JapPhrase {
@@ -26,7 +30,7 @@
 
 .SubHead {
   color: #8692b0;
-  font-size: clamp(30px, 8vw, 70px);
+  font-size: clamp(20px, 4.5vw, 70px);
   font-weight: bold;
   text-align: left;
   z-index: 3;
@@ -50,10 +54,10 @@
 
 .hero {
   position: absolute;
-  right: 0px;
+  right: 100px;
   top: 400px;
   height: auto;
-  width: 400px;
+  width: 300px;
   z-index: 2;
 }
 
@@ -68,7 +72,7 @@
 
 .cloud1 {
   position: absolute;
-  right: 150px;
+  right: 250px;
   top: 500px;
   width: 300px;
   height: auto;
@@ -86,7 +90,7 @@
 
 .cloud2 {
   position: absolute;
-  right: 0px;
+  right: 100px;
   top: 650px;
   width: 300px;
   height: auto;
@@ -102,9 +106,30 @@
   z-index: 3;
 }
 
-@media all and (max-width: 768px) {
+
+
+
+@media all and (max-width: 1200px) {
+  .IntroSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
   .Intro {
     margin: 0 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .heroBox {
+    position: absolute;
+    top: calc(780px - 15vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .Name {
@@ -116,16 +141,51 @@
   }
 
   .SubHead {
-    font-size: clamp(30px, 7vw, 50px);
+    font-size: clamp(20px, 7vw, 50px);
   }
 
   .hero, .cloud1, .cloud2 {
-    display: none;
+    position: relative;
+  }
+
+  .hero {
+    /* left: 200px; */
+    top: 0px;
+    right: -120px;
+    width: 200px;
+  }
+
+  .cloud1 {
+    /* right: 120px; */
+    top: -10px;
+    right: 120px;
+    width: 150px;
+  }
+
+  .cloud2 {
+    right: 150px;
+    top: 60px;
+    width: 150px;
   }
 }
 
-@media all and (max-width: 1200px) {
-  .hero, .cloud1, .cloud2 {
-    opacity: 0;
+@media all and (max-width: 500px) {
+  .hero {
+    width: 160px;
+  }
+  .cloud1, .cloud2 {
+    width: 150px;
+  }
+
+  .cloud1 {
+    right: 75px;
+  }
+
+  .cloud2 {
+    right: 160px;
+  }
+
+  .heroBox {
+    top: calc(850px - 12vw);
   }
 }

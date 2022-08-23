@@ -68,7 +68,7 @@ const Intro = ({intro, contactRef}) => {
   }
 
   return (
-    <div>
+    <div className={styles.IntroSection}>
       <div className={styles.Intro}>
         <h3 className={styles.JapPhrase}>
           こんにちは はじめまして! (Hello, Nice to meet you!)
@@ -97,6 +97,7 @@ const Intro = ({intro, contactRef}) => {
         variants={HeroBox}
         // initial='hidden'
         // animate='visible'
+        className={styles.heroBox}
         >
         <motion.img
         variants={HeroSway}
