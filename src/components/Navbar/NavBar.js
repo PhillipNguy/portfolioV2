@@ -6,6 +6,8 @@ import { ThemeContext } from '../../pages/App';
 import NavLink from '../NavLink.js';
 import {Nav, Bars, X, NavMenu} from './NavbarElements';
 
+import { debouncer } from '../hooks/debouncer';
+
 import { AnimatePresence, motion } from 'framer-motion';
 const variants = {
   open: { opacity: 1, x: 0},
@@ -34,9 +36,21 @@ const dropIn = {
 }
 
 const NavBar = React.forwardRef((props, ref) => {
+
+
   const { theme } = useContext(ThemeContext);
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(false);
+
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = debouncer(() => {
+    const currentScrollPos = window.pageYOffset;
+    setVisible((prevScrollPos > currentScrollPos));
+    setPrevScrollPos(currentScrollPos)
+  }, 10)
+
   const handleClick = () => {
     setClick(!click)
     if(click) {
@@ -61,10 +75,15 @@ const NavBar = React.forwardRef((props, ref) => {
   useEffect(() => {
     showButton();
     window.addEventListener('resize', showButton);
-    // return {
-    //   window.removeEventListener('resize', showButton);
-    // }
+    return () =>
+      window.removeEventListener('resize', showButton);
+
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [prevScrollPos, visible, handleScroll])
 
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -76,7 +95,10 @@ const NavBar = React.forwardRef((props, ref) => {
 
 
   return (
-    <Nav className={styles.topBar}>
+    <Nav className={styles.topBar} style={{
+      top: visible ? '0' : '-100px',
+      boxShadow: visible ? '0 1px 10px 5px #061020' : ''
+      }}>
       <button className={stylesNav.logoButton} onClick={()=> scrollToSection(ref.intro)}>
         <img src={require('../../assets/logo.png')} className={stylesNav.logo} />
       </button>
